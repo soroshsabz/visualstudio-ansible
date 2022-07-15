@@ -1,6 +1,7 @@
-// ITNOA
-// Based on https://github.com/flcdrg/VsShowMissing
 {
+	// ITNOA
+	// Based on https://github.com/flcdrg/VsShowMissing
+
 	"$schema": "http://json.schemastore.org/vsix-publish",
 	"categories": [
 		"build"
