@@ -1,4 +1,5 @@
 # ITNOA
+# Based on https://github.com/flcdrg/VsShowMissing
 
 name: CI
 
@@ -88,7 +89,7 @@ jobs:
       GitBuildVersion: ${{ needs.build.outputs.GitBuildVersion }}
       GitBuildVersionSimple: ${{ needs.build.outputs.GitBuildVersionSimple }}
 
-    if: github.ref == 'refs/heads/master' # Running this job only for master branch
+    if: github.ref == 'refs/heads/main' # Running this job only for master branch
     steps:
       - uses: actions/checkout@v3
 

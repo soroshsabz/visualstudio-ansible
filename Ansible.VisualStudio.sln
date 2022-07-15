@@ -10,6 +10,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0BE7CE8C-DD2A-41FC-B918-28B06156FB53}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{44383370-DF6A-4EDA-8ADC-FA5457FDAB75}"
+	ProjectSection(SolutionItems) = preProject
+		.github\extension-manifest-2022.json = .github\extension-manifest-2022.json
+		.github\release-drafter.yml = .github\release-drafter.yml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A31DC4FC-38C5-4794-B6BC-62D34EB0D645}"
 	ProjectSection(SolutionItems) = preProject
