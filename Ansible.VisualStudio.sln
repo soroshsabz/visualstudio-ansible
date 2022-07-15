@@ -3,9 +3,32 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{ADB82ED7-667E-4C8F-A914-CC5AD1EDF99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.VisualStudio", "Source\Ansible.VisualStudio\Ansible.VisualStudio.csproj", "{2220ED02-C183-4A29-9E24-BEC28E10E941}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Debug|x86.ActiveCfg = Debug|x86
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Debug|x86.Build.0 = Debug|x86
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Release|x86.ActiveCfg = Release|x86
+		{2220ED02-C183-4A29-9E24-BEC28E10E941}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2220ED02-C183-4A29-9E24-BEC28E10E941} = {ADB82ED7-667E-4C8F-A914-CC5AD1EDF99D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF4C528C-EAD9-4CA3-98F5-65D9CF4441D9}
