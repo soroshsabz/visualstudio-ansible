@@ -9,7 +9,7 @@ namespace Ansible.VisualStudio.LanguageServer
     {
         public Loader()
         {
-            IJsEngine engine = new NodeJsEngine();
+            IJsEngine engine = new NodeJsEngine(new NodeSettings { UseBuiltinLibrary = true});
             engine.ExecuteFile("SpawnServer.js");
         }
     }
