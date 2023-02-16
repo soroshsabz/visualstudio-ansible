@@ -8,6 +8,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.VisualStudio", "Source\Ansible.VisualStudio\Ansible.VisualStudio.csproj", "{2220ED02-C183-4A29-9E24-BEC28E10E941}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0BE7CE8C-DD2A-41FC-B918-28B06156FB53}"
+	ProjectSection(SolutionItems) = preProject
+		ansible.png = ansible.png
+		CHANGELOG.md = CHANGELOG.md
+		CHANGELOG.txt = CHANGELOG.txt
+		LICENSE = LICENSE
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{44383370-DF6A-4EDA-8ADC-FA5457FDAB75}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,6 +26,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A31DC4FC-38C5-4794-B6BC-62D34EB0D645}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\main.yml = .github\workflows\main.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C55C63E9-C944-43EE-AD4E-233CD38B7506}"
+	ProjectSection(SolutionItems) = preProject
+		Test\Test.ansible.yaml = Test\Test.ansible.yaml
 	EndProjectSection
 EndProject
 Global
