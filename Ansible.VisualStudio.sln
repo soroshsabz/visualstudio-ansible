@@ -30,6 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C55C63E9-C944-43EE-AD4E-233CD38B7506}"
 	ProjectSection(SolutionItems) = preProject
+		Test\Test.ansible = Test\Test.ansible
 		Test\Test.ansible.yaml = Test\Test.ansible.yaml
 	EndProjectSection
 EndProject

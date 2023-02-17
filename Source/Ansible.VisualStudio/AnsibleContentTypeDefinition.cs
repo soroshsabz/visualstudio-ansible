@@ -15,12 +15,12 @@ namespace Ansible.VisualStudio
         [Export]
         [Name("ansible")]
         [BaseDefinition(CodeRemoteContentDefinition.CodeRemoteContentTypeName)]
-        internal static ContentTypeDefinition KamailioContentTypeDefinition;
+        internal static ContentTypeDefinition AnsibleContentTypeDefinition;
 
         [Export]
         [FileExtension(".ansible.yaml")]
         [ContentType("ansible")]
-        internal static FileExtensionToContentTypeDefinition KamailioFileExtensionDefinition;
+        internal static FileExtensionToContentTypeDefinition AnsibleFileExtensionDefinition;
     }
 #pragma warning restore 649
 }

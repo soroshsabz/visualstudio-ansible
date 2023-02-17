@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
     <dict>
+		<key>name</key>
+		<string>ansible</string>
+		<key>scopeName</key>
+		<string>source.ansible</string>
         <key>comment</key>
         <array>
             <string>Imported from:</string>
@@ -12,6 +16,9 @@
         </array>
         <key>fileTypes</key>
         <array>
+			<string>ansible.yaml</string>
+			<string>ansible</string>
+        <!-- 
             <string>yaml</string>
             <string>yml</string>
             <string>rviz</string>
@@ -20,6 +27,7 @@
             <string>yaml-tmlanguage</string>
             <string>syntax</string>
             <string>sublime-syntax</string>
+-->
         </array>
         <key>firstLineMatch</key>
         <string>^%YAML( ?1.\d+)?</string>
