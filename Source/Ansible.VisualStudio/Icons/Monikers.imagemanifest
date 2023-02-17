@@ -10,7 +10,7 @@
   <Images>
     <Image Guid="$(MonikersGuid)" ID="$(ansible)">
       <Source Uri="$(Resources)/ansible.png">
-        <Size Value="200" />
+        <Size Value="32" />
       </Source>
     </Image>
   </Images>
