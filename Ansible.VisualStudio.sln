@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.VisualStudio", "Sou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0BE7CE8C-DD2A-41FC-B918-28B06156FB53}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		ansible.png = ansible.png
 		CHANGELOG.md = CHANGELOG.md
 		CHANGELOG.txt = CHANGELOG.txt

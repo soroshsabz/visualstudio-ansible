@@ -50,6 +50,11 @@
     <Compile Include="AnsiblePackage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\Icon.png">
+      <Link>Resources\Icon.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="Grammars\jinja-braces.tmLanguage">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -74,6 +79,22 @@
     <Content Include="Grammars\YAML.tmLanguage">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="..\..\CHANGELOG.md">
+      <Link>Resources\CHANGELOG.md</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\LICENSE">
+      <Link>Resources\LICENSE</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="..\..\README.md">
+      <Link>Resources\README.md</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Resource Include="Icons\ansible.png" />
+    <Content Include="Icons\Monikers.imagemanifest">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
@@ -88,21 +109,6 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="..\..\ansible.png">
-      <Link>ansible.png</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="..\..\CHANGELOG.txt">
-      <Link>CHANGELOG.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="..\..\LICENSE.txt">
-      <Link>LICENSE.txt</Link>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="contents.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>

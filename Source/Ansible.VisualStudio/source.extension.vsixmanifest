@@ -5,11 +5,12 @@
         <DisplayName>Ansible.VisualStudio</DisplayName>
         <Description xml:space="preserve">Ansible Visual Studio Extension based on https://github.com/ansible/vscode-ansible</Description>
         <MoreInfo>https://github.com/soroshsabz/visualstudio-ansible</MoreInfo>
-        <License>LICENSE.txt</License>
-        <ReleaseNotes>CHANGELOG.txt</ReleaseNotes>
-        <Icon>ansible.png</Icon>
-        <PreviewImage>ansible.png</PreviewImage>
-        <Tags>ansible programming-language vscode-extension visual-studio-extension</Tags>
+        <License>Resources\LICENSE</License>
+        <GettingStartedGuide>Resources\README.md</GettingStartedGuide>
+        <ReleaseNotes>Resources\CHANGELOG.md</ReleaseNotes>
+        <Icon>Resources\Icon.png</Icon>
+        <PreviewImage>Resources\Icon.png</PreviewImage>
+        <Tags>ansible, programming-language, vscode-extension. visual-studio-extension</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
@@ -23,5 +24,7 @@
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
     <Assets>
+        <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="contents.pkgdef" />
+        <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
     </Assets>
 </PackageManifest>

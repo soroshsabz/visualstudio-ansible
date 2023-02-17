@@ -18,7 +18,7 @@ namespace Ansible.VisualStudio
         internal static ContentTypeDefinition AnsibleContentTypeDefinition;
 
         [Export]
-        [FileExtension(".ansible.yaml")]
+        [FileExtension(".ansible")]
         [ContentType("ansible")]
         internal static FileExtensionToContentTypeDefinition AnsibleFileExtensionDefinition;
     }

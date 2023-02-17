@@ -9,3 +9,6 @@
       debug:
         msg: "{{ item }}"
       loop: "{{ list_for_loop }}"
+      when: ansible_os_family == 'RedHat'
+      tags:
+        - debugs

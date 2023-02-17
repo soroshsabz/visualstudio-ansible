@@ -16,7 +16,6 @@
         </array>
         <key>fileTypes</key>
         <array>
-			<string>ansible.yaml</string>
 			<string>ansible</string>
         <!-- 
             <string>yaml</string>
