@@ -1,0 +1,14 @@
+- host: all
+  vars:
+    list_for_loop: [1, 2, 3]
+  tasks:
+    - name: Ping endpoing
+      ping:
+        data: test
+    - name: Show debug info
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ list_for_loop }}"
+      when: ansible_os_family == 'RedHat'
+      tags:
+        - debugs

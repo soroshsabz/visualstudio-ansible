@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using Community.VisualStudio.Toolkit;
+using Microsoft.VisualStudio.Shell;
 using System;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -25,7 +26,8 @@ namespace Ansible.VisualStudio
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(AnsiblePackage.PackageGuidString)]
-    public sealed class AnsiblePackage : AsyncPackage
+    [ProvideBindingPath()]
+    public sealed class AnsiblePackage : ToolkitPackage
     {
          /// <summary>
         /// Ansible.VisualStudioPackage GUID string.
