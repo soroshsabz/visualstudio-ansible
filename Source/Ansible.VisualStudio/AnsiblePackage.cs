@@ -26,7 +26,7 @@ namespace Ansible.VisualStudio
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(AnsiblePackage.PackageGuidString)]
-    [ProvideFileIcon(".ansible", "c869a55b-b356-4055-a62e-524f21f8c960:0")]
+    [ProvideBindingPath()]
     public sealed class AnsiblePackage : ToolkitPackage
     {
          /// <summary>
