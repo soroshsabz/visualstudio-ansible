@@ -6,8 +6,10 @@
 ; Find more icons at http://glyphlist.azurewebsites.net/knownmonikers/
 ; Find specific custom icons at Icons\Monikers.imagemanifest
 [$RootKey$\ShellFileAssociations\.ansible]
-; "DefaultIconMoniker"="KnownMonikers.Action"
 "DefaultIconMoniker"="c869a55b-b356-4055-a62e-524f21f8c960:0"
 ; Add an icon for each file extension supported by the .tmLanguage grammar file
 ; [$RootKey$\ShellFileAssociations\.ansible.yaml]
 ; "DefaultIconMoniker"="c869a55b-b356-4055-a62e-524f21f8c960:0"
+
+[$RootKey$\BindingPaths\{c869a55b-b356-4055-a62e-524f21f8c960}]
+"$PackageFolder$"=""
