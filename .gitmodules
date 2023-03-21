@@ -1,0 +1,3 @@
+[submodule "Dependency/vscode-ansible"]
+	path = Dependency/vscode-ansible
+	url = https://github.com/ansible/vscode-ansible.git
