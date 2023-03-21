@@ -25,6 +25,7 @@ namespace Ansible.VisualStudio
     /// </remarks>
     [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]
     [Guid(AnsiblePackage.PackageGuidString)]
+    [ProvideBindingPath()]
     public sealed class AnsiblePackage : AsyncPackage
     {
          /// <summary>
