@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="AnsibleContentTypeDefinition.cs" />
     <Compile Include="AnsibleLanguageClient.cs" />
+    <Compile Include="ILanguageServerClientProcess.cs" />
+    <Compile Include="LanguageServerClientProcess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AnsiblePackage.cs" />
   </ItemGroup>

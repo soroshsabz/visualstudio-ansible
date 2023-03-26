@@ -4,6 +4,7 @@ using Microsoft.VisualStudio.Utilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -15,6 +16,11 @@ namespace Ansible.VisualStudio
     [Export(typeof(ILanguageClient))]
     public class AnsibleLanguageClient : ILanguageClient
     {
+        public AnsibleLanguageClient(ILanguageServerClientProcess languageServerClientProcess)
+        {
+            _languageServerClientProcess = languageServerClientProcess;
+        }
+
         public string Name => "Ansible Language Extension";
 
         public IEnumerable<string> ConfigurationSections => null;
@@ -28,9 +34,29 @@ namespace Ansible.VisualStudio
         public event AsyncEventHandler<EventArgs> StartAsync;
         public event AsyncEventHandler<EventArgs> StopAsync;
 
-        public Task<Connection> ActivateAsync(CancellationToken token)
+        public async Task<Connection> ActivateAsync(CancellationToken token)
         {
-            throw new NotImplementedException();
+            await Task.Yield();
+            Connection connection= null;
+            try
+            {
+                Process process = _languageServerClientProcess.Create();
+                // TODO: Log
+                if (process.Start())
+                {
+                    connection = new Connection(reader: process.StandardOutput.BaseStream, writer: process.StandardInput.BaseStream);
+                }
+                else
+                {
+                    // TODO: Log
+                }
+            }
+            catch(Exception ex)
+            {
+                // TOOD: Log
+                throw ex;
+            }
+            return connection;
         }
 
         public Task OnLoadedAsync()
@@ -43,9 +69,15 @@ namespace Ansible.VisualStudio
             throw new NotImplementedException();
         }
 
+        // TODO: Check x64
         public Task<InitializationFailureContext> OnServerInitializeFailedAsync(ILanguageClientInitializationInfo initializationState)
         {
-            throw new NotImplementedException();
+            return Task.FromResult(new InitializationFailureContext
+            {
+                FailureMessage = initializationState.StatusMessage
+            });
         }
+
+        private readonly ILanguageServerClientProcess _languageServerClientProcess;
     }
 }
