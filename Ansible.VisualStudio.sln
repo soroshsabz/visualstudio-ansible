@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		CHANGELOG.txt = CHANGELOG.txt
 		LICENSE = LICENSE
 		LICENSE.txt = LICENSE.txt
+		make-ready.ps1 = make-ready.ps1
+		make-ready.sh = make-ready.sh
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -76,6 +78,34 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "vscode-ansible", "vscode-an
 		Dependency\vscode-ansible\yarn.lock = Dependency\vscode-ansible\yarn.lock
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ansible-language-server", "ansible-language-server", "{AC207B63-73B3-460A-8B76-ACB479C34926}"
+	ProjectSection(SolutionItems) = preProject
+		Dependency\ansible-language-server\.editorconfig = Dependency\ansible-language-server\.editorconfig
+		Dependency\ansible-language-server\.envrc = Dependency\ansible-language-server\.envrc
+		Dependency\ansible-language-server\.eslintrc.json = Dependency\ansible-language-server\.eslintrc.json
+		Dependency\ansible-language-server\.git = Dependency\ansible-language-server\.git
+		Dependency\ansible-language-server\.gitattributes = Dependency\ansible-language-server\.gitattributes
+		Dependency\ansible-language-server\.gitignore = Dependency\ansible-language-server\.gitignore
+		Dependency\ansible-language-server\.mocharc.yml = Dependency\ansible-language-server\.mocharc.yml
+		Dependency\ansible-language-server\.npmrc = Dependency\ansible-language-server\.npmrc
+		Dependency\ansible-language-server\.nycrc.yml = Dependency\ansible-language-server\.nycrc.yml
+		Dependency\ansible-language-server\.pre-commit-config.yaml = Dependency\ansible-language-server\.pre-commit-config.yaml
+		Dependency\ansible-language-server\.prettierignore = Dependency\ansible-language-server\.prettierignore
+		Dependency\ansible-language-server\.prettierrc.yaml = Dependency\ansible-language-server\.prettierrc.yaml
+		Dependency\ansible-language-server\.readthedocs.yml = Dependency\ansible-language-server\.readthedocs.yml
+		Dependency\ansible-language-server\.vscodeignore = Dependency\ansible-language-server\.vscodeignore
+		Dependency\ansible-language-server\codecov.yml = Dependency\ansible-language-server\codecov.yml
+		Dependency\ansible-language-server\cspell.config.yaml = Dependency\ansible-language-server\cspell.config.yaml
+		Dependency\ansible-language-server\icon.png = Dependency\ansible-language-server\icon.png
+		Dependency\ansible-language-server\LICENSE = Dependency\ansible-language-server\LICENSE
+		Dependency\ansible-language-server\mkdocs.yml = Dependency\ansible-language-server\mkdocs.yml
+		Dependency\ansible-language-server\package-lock.json = Dependency\ansible-language-server\package-lock.json
+		Dependency\ansible-language-server\package.json = Dependency\ansible-language-server\package.json
+		Dependency\ansible-language-server\README.md = Dependency\ansible-language-server\README.md
+		Dependency\ansible-language-server\Taskfile.yml = Dependency\ansible-language-server\Taskfile.yml
+		Dependency\ansible-language-server\tsconfig.json = Dependency\ansible-language-server\tsconfig.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -118,6 +148,7 @@ Global
 		{E6409DED-F59C-4E70-BEF1-6E9B440C3031} = {ADB82ED7-667E-4C8F-A914-CC5AD1EDF99D}
 		{4B16B7A9-8ED7-4E04-AC94-CB032F3C7359} = {ADB82ED7-667E-4C8F-A914-CC5AD1EDF99D}
 		{3BAB8E44-DE8E-452A-BA09-59050D537BDB} = {F680C95F-E1FF-407A-BD52-AED7CCD4DA0C}
+		{AC207B63-73B3-460A-8B76-ACB479C34926} = {F680C95F-E1FF-407A-BD52-AED7CCD4DA0C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF4C528C-EAD9-4CA3-98F5-65D9CF4441D9}

@@ -16,11 +16,6 @@ namespace Ansible.VisualStudio
     [Export(typeof(ILanguageClient))]
     public class AnsibleLanguageClient : ILanguageClient
     {
-        public AnsibleLanguageClient(ILanguageServerClientProcess languageServerClientProcess)
-        {
-            _languageServerClientProcess = languageServerClientProcess;
-        }
-
         public string Name => "Ansible Language Extension";
 
         public IEnumerable<string> ConfigurationSections => null;
@@ -40,7 +35,8 @@ namespace Ansible.VisualStudio
             Connection connection= null;
             try
             {
-                Process process = _languageServerClientProcess.Create();
+                Process process = _languageServerClientProcess?.Create() ?? new LanguageServerClientProcess().Create();
+
                 // TODO: Log
                 if (process.Start())
                 {
@@ -59,14 +55,25 @@ namespace Ansible.VisualStudio
             return connection;
         }
 
-        public Task OnLoadedAsync()
+        public async Task OnLoadedAsync()
         {
-            throw new NotImplementedException();
+            if (StartAsync != null)
+            {
+                await StartAsync.InvokeAsync(this, EventArgs.Empty);
+            }
         }
 
-        public Task OnServerInitializedAsync()
+        public async Task StopServerAsync()
         {
-            throw new NotImplementedException();
+            if (StopAsync != null)
+            {
+                await StopAsync.InvokeAsync(this, EventArgs.Empty);
+            }
+        }
+
+        public async Task OnServerInitializedAsync()
+        {
+            await Task.CompletedTask;
         }
 
         // TODO: Check x64
