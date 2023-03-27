@@ -52,7 +52,7 @@ jobs:
         ls
         npm install .
         npm ci
-        npm compile
+        npm run compile
     - uses: actions/cache@v3
       with:
         path: ${{ github.workspace }}/.nuget/packages
