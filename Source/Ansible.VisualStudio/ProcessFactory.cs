@@ -23,7 +23,7 @@ namespace Ansible.VisualStudio
             var info = new ProcessStartInfo
             {
                 FileName = fileName,
-                Arguments = arguments,
+                Arguments = "--nolazy --inspect=6009 " + arguments,
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardInput = true,
@@ -56,7 +56,7 @@ namespace Ansible.VisualStudio
                 StartInfo = new ProcessStartInfo
                 {
                     FileName = $@"cmd.exe",
-                    Arguments = $@"/c wsl {fileName} {arguments}",
+                    Arguments = $@"/c wsl {fileName} --nolazy --inspect=6009 {arguments}",
                     UseShellExecute = false,
                     RedirectStandardOutput = true,
                     RedirectStandardInput = true,

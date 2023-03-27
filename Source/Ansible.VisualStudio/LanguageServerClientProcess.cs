@@ -16,7 +16,7 @@ namespace Ansible.VisualStudio
             var assembly = Assembly.GetAssembly(typeof(LanguageServerClientProcess));
             string arguments = null;
             var exe = @"node.exe";
-            var logPath = $"";
+            var logPath = $"server.log";
 
 #if DEBUG
             Node.EnsureVersion(exe);
@@ -28,7 +28,7 @@ namespace Ansible.VisualStudio
                 throw new FileNotFoundException(path);
             }
 
-            arguments = $@" ""{path}"" --stdio";
+            arguments = $@" ""{path}"" --stdio --log={logPath}";
 #endif
 
             return ProcessFactory.Create(fileName: exe, arguments: arguments);

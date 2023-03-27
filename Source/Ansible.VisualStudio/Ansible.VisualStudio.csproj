@@ -101,6 +101,13 @@
     <Content Include="Monikers.imagemanifest">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="..\..\Dependency\vscode-ansible\ansible-language-configuration.json">
+      <Link>ansible-language-configuration.json</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="..\..\Dependency\vscode-ansible\jinja-language-configuration.json">
+      <Link>jinja-language-configuration.json</Link>
+    </None>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
