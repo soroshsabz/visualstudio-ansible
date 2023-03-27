@@ -9,3 +9,10 @@
 ; Find specific custom icons at Icons\Monikers.imagemanifest
 [$RootKey$\ShellFileAssociations\.ansible]
 "DefaultIconMoniker"="c869a55b-b356-4055-a62e-524f21f8c960:0"
+
+[$RootKey$\TextMate\LanguageConfiguration\GrammarMapping]
+"source.env"="$PackageFolder$"\ansible-language-configuration.json"
+
+;[$RootKey$\ImageLibrary]
+;"TraceLevel"="Verbose"
+;"TraceFilename"="ImageLibrary.log"

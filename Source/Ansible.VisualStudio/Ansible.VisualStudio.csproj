@@ -47,6 +47,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AnsibleContentTypeDefinition.cs" />
+    <Compile Include="AnsibleLanguageClient.cs" />
+    <Compile Include="ILanguageServerClientProcess.cs" />
+    <Compile Include="LanguageServerClientProcess.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="ProcessFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AnsiblePackage.cs" />
   </ItemGroup>
@@ -96,6 +101,13 @@
     <Content Include="Monikers.imagemanifest">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="..\..\Dependency\vscode-ansible\ansible-language-configuration.json">
+      <Link>ansible-language-configuration.json</Link>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="..\..\Dependency\vscode-ansible\jinja-language-configuration.json">
+      <Link>jinja-language-configuration.json</Link>
+    </None>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>
@@ -105,18 +117,15 @@
     <Reference Include="System.ComponentModel.Composition" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Community.VisualStudio.Toolkit.17">
-      <Version>17.0.492</Version>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.4.33103.184" ExcludeAssets="runtime">
-      <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.4.2120">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.32112.339" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.2.2190" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Ansible.VisualStudio.LanguageServer\Ansible.VisualStudio.LanguageServer.csproj">
+      <Project>{e6409ded-f59c-4e70-bef1-6e9b440c3031}</Project>
+      <Name>Ansible.VisualStudio.LanguageServer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="contents.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

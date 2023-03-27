@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<Content Include="..\..\Dependency\ansible-language-server\package-lock.json" Link="package-lock.json">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <IncludeInVSIX>true</IncludeInVSIX>
+	</Content>
+	<Content Include="..\..\Dependency\ansible-language-server\package.json" Link="package.json">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  <IncludeInVSIX>true</IncludeInVSIX>
+	</Content>
+	<Content Include="SpawnServer.js">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Content>
+  </ItemGroup>
+
+  <ItemGroup>
+	<PackageReference Include="JavaScriptEngineSwitcher.Core" Version="3.19.0" />
+	<PackageReference Include="JavaScriptEngineSwitcher.Jurassic" Version="3.20.5" />
+	<PackageReference Include="JavaScriptEngineSwitcher.Node" Version="3.19.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<!--based on https://stackoverflow.com/a/75852287/1539100-->
+		<Content Include="..\..\Dependency\ansible-language-server\out\server\src\**\*">
+			<LinkBase>ansible-language-server</LinkBase>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<IncludeInVSIX>true</IncludeInVSIX>
+		</Content>
+		<!--
+		<Content Include="..\..\Dependency\ansible-language-server\out\server\src\server.js">
+			<Link>ansible-language-server\server.js</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<IncludeInVSIX>true</IncludeInVSIX>
+		</Content>
+		<Content Include="..\..\Dependency\ansible-language-server\out\server\src\ansibleLanguageService.js">
+			<Link>ansible-language-server\ansibleLanguageService.js</Link>
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<IncludeInVSIX>true</IncludeInVSIX>
+		</Content>
+
+		-->
+	</ItemGroup>
+
+</Project>

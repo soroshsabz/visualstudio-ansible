@@ -40,8 +40,19 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
       with:
+        submodules: true
         fetch-depth: 0
-
+    - name: Use Node.js 16.x
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+    - name: Prepare ansible-langauge-server
+      run: |
+        cd Dependency/ansible-language-server
+        ls
+        npm install .
+        npm ci
+        npm run compile
     - uses: actions/cache@v3
       with:
         path: ${{ github.workspace }}/.nuget/packages

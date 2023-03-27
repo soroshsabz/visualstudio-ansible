@@ -5,6 +5,11 @@
     - name: Ping endpoing
       ping:
         data: test
+    - name: install something
+      debug:
+        msg: "{{ item }}"
+      tags:
+        - debugs
     - name: Show debug info
       debug:
         msg: "{{ item }}"
